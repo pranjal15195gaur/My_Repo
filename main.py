@@ -1,4 +1,4 @@
-"""Binary Search Implementation: Iterative and Recursive Approaches."""
+"""Binary Search implementation with both iterative and recursive approaches."""
 
 def binary_search_iterative(arr, target):
     """Performs iterative binary search on a sorted array."""
@@ -9,9 +9,10 @@ def binary_search_iterative(arr, target):
 
         if arr[mid] == target:
             return mid  # Target found, return index
-        if arr[mid] < target:
+        elif arr[mid] < target:
             left = mid + 1  # Search right half
-        right = mid - 1  # Search left half
+        else:
+            right = mid - 1  # Search left half
 
     return -1  # Target not found
 
