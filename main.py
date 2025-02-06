@@ -9,7 +9,7 @@ def binary_search_iterative(arr, target):
 
         if arr[mid] == target:
             return mid  # Target found, return index
-        
+
         if arr[mid] < target:
             left = mid + 1  # Search right half
         else:
@@ -26,10 +26,10 @@ def binary_search_recursive(arr, left, right, target):
 
     if arr[mid] == target:
         return mid  # Target found, return index
-    
+
     if arr[mid] < target:
         return binary_search_recursive(arr, mid + 1, right, target)  # Search right half
-    
+
     return binary_search_recursive(arr, left, mid - 1, target)  # Search left half
 
 def main():
